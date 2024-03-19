@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: 9989/makeitwork:12
+        image: 9989/makeitwork:replaceImageTag
         ports:
         - containerPort: 8080
