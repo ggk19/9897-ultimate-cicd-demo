@@ -1,6 +1,18 @@
-
    
-apiVersion: apps/v1
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: default
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    iam.gke.io/gcp-service-account: gke-ems-access@healthy-zone-415519.iam.gserviceaccount.com
+  name: service-account-gke
+  namespace: default
+---  
+apiVersion: apps/v1  
 kind: Deployment
 metadata:
   name: nodeapp-deployment
